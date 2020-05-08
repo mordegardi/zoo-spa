@@ -24,4 +24,14 @@ class Species extends Model
     protected $fillable = [
         'name',
     ];
+
+    /**
+     * Animals relationship
+     * 
+     * @return HasMany
+     */
+    public function animals()
+    {
+        return $this->hasMany(\App\Animal::class, 'species_id');
+    }
 }

@@ -40,6 +40,6 @@ class Animal extends Model
      */
     public function species()
     {
-        return $this->belongsTo(Species::class);
+        return $this->belongsTo(Species::class, 'species_id');
     }
 }
